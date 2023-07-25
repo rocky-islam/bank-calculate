@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Calculate</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="tailwind.config.js"></script> -->
+
+</head>
+<body>
+    <header>
+        <h1 class="text-center m-10 text-5xl hover:animate-bounce">Welcome to <span class="text-red-500 font-semibold">The Bank</span></h1>
+    </header>
+    <main>
+        <section class="bg-green-300 w-2/4 mx-auto p-5 rounded">
+            <h2 class="text-3xl font-medium">Please Login</h2>
+            <section class="my-2" action="">
+                <div>
+                    <input id="email" class="w-3/4 p-1 rounded pl-4 my-2 text-lg block" type="text" placeholder="Enter Your Email address">
+                </div>
+                <div class="relative">
+                    <input id="password" class="w-3/4 p-1 rounded pl-4 my-2 text-lg block" type="password" placeholder="Enter Your password">
+                    <i id="eye" class="fa-solid fa-eye absolute top-[10px] right-48 cursor-pointer"></i>
+                </div>
+                <p id="error" class="text-red-600 hidden">error email or password</p>
+                <button id="submit" class="bg-red-500 px-6 py-2 rounded text-xl font-medium hover:bg-orange-400" type="submit">LOGIN</button>
+            </section>
+        </section>
+    </main>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
