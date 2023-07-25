@@ -32,17 +32,27 @@ document.getElementById('btn-withdraw').addEventListener('click', () =>{
     // console.log(withdrawInputValue);
     // add withdraw value in withdraw field
 
-    let previousWithdrawValue = document.getElementById('withdraw-value');
-    previousWithdrawValue.innerText = parseInt(previousWithdrawValue.innerText) + withdrawInputValue;
+    
     // console.log(previousWithdrawValue);
 
     // main balance calculate
     let mainBalance = document.getElementById('balance');
     let mainBalanceValue = parseInt(mainBalance.innerText);
     // console.log(mainBalanceValue);
-    mainBalance.innerText = mainBalanceValue - withdrawInputValue;
+    if(mainBalanceValue >= withdrawInputValue){
+        // add withdraw
+        let previousWithdrawValue = document.getElementById('withdraw-value');
+        previousWithdrawValue.innerText = parseInt(previousWithdrawValue.innerText) + withdrawInputValue;
 
-    withdrawInputField.value = '';
+        // main balance
+        mainBalance.innerText = mainBalanceValue - withdrawInputValue;
+        withdrawInputField.value = '';
+    }
+    else{
+        alert('You have not sufficient balance')
+    }
+
+    
     
 })
 
