@@ -41,6 +41,8 @@ document.getElementById('btn-withdraw').addEventListener('click', () =>{
     let mainBalanceValue = parseInt(mainBalance.innerText);
     // console.log(mainBalanceValue);
     mainBalance.innerText = mainBalanceValue - withdrawInputValue;
+
+    withdrawInputField.value = '';
     
 })
 
